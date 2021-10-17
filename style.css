@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #161523;
+    transition: .1s ease-in-out;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    background: linear-gradient(#FF6A06, #DE2853);
+    border-radius: 50%;
+    transform: translate(-150px, -160px);
+}
+
+section::after {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(#31B9C5, #40FF73);
+    border-radius: 50%;
+    transform: translate(150px, 160px);
+}
+
+#container {
+    width: 300px;
+    height: 400px;
+    background: #2d2d3918;
+    z-index: 10;
+    border-radius: 8px;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 25px 45px rgba(189, 187, 187, 0.11);
+    border: .1px solid rgba(255, 255, 255, 0.329);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h3 {
+    color: #ffffff;
+    font-size: 21px;
+}
+
+#batteryShape {
+    position: relative;
+    width: 140px;
+    height: 60px;
+    margin: 20px 0;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+#batteryShape::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 14px;
+    background: #fff;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#batteryShape::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50%;
+    background: rgba(241, 241, 241, 0.281);
+}
+
+#level {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#percentage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    width: 90%;
+    height: 100%;
+    background: linear-gradient(90deg, #31B9C5, #40FF73);
+}
+
+#percent {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+}
